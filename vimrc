@@ -22,10 +22,10 @@ set textwidth=100
 
 set listchars=tab:➟\ ,eol:⤦,trail:·
 map <leader>l :set list!
+map <silent> <F2> :NERDTreeToggle
 
 nnoremap Q gq}
 
 autocmd FileType text setl updatetime=1000
-
 autocmd FileType tex setl ts=2 sw=2
 
