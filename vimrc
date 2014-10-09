@@ -1,3 +1,4 @@
+
 set nocompatible
 filetype off
 
@@ -15,27 +16,26 @@ Plugin 'bitc/vim-hdevtools'
 call vundle#end()
 filetype plugin indent on
 
-"Pathogen
-"execute pathogen#infect()
-"execute pathogen#helptags()
-
 set encoding=utf-8
 
-map <Leader>n <esc>:tabprevious<CR>
-map <Leader>m <esc>:tabnext<CR>
-
-"Enable syntax highlighting
 syntax on
 
 set tabstop=4
 set expandtab
 set number
 set shiftwidth=4
-set background=dark
+
+set splitright
+set splitbelow
+
 set textwidth=100
+set background=dark
 
 set listchars=tab:➟\ ,eol:⤦,trail:·
 map <leader>l :set list!
+map <Leader>n <esc>:tabprevious<CR>
+map <Leader>m <esc>:tabnext<CR>
+
 map <silent> <F2> :NERDTreeToggle
 
 nnoremap Q gq}
@@ -46,3 +46,5 @@ autocmd FileType fortran setl ts=2 sw=2
 autocmd FileType haskell setl ts=2 sw=2
 autocmd FileType haskell map <silent> <F3> :HdevtoolsType
 autocmd FileType haskell map <silent> <F4> :HdevtoolsClear
+
+let NERDTreeIgnore = ['\.o$', '\.mod$']
