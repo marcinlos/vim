@@ -12,20 +12,29 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-commentary' 
 Plugin 'Shougo/unite.vim'
 Plugin 'godlygeek/tabular'
 
-Plugin 'Shougo/vimproc.vim'
+"Plugin 'jlanzarotta/bufexplorer' 
+"Plugin 'wincent/command-t' 
+
+" Tags
+Plugin 'xolox/vim-misc' 
+Plugin 'xolox/vim-easytags' 
+
 
 Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'idris-hackers/idris-vim'
 
+" Haskell plugins
 "Plugin 'bitc/vim-hdevtools'
+" vimproc is needed by ghcmod-vim
+Plugin 'Shougo/vimproc.vim'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'eagletmt/neco-ghc'
 Plugin 'dag/vim2hs'
-
 
 call vundle#end()
 filetype plugin indent on
@@ -41,6 +50,8 @@ set number
 
 set splitright
 set splitbelow
+set virtualedit=block
+set wildmenu
 
 set textwidth=100
 set background=dark
@@ -71,3 +82,4 @@ autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 let g:haskell_conceal = 0
+
