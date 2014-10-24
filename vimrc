@@ -13,8 +13,11 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary' 
-Plugin 'Shougo/unite.vim'
 Plugin 'godlygeek/tabular'
+
+if v:version >= 702
+    Plugin 'Shougo/unite.vim'
+endif
 
 "Plugin 'jlanzarotta/bufexplorer' 
 "Plugin 'wincent/command-t' 
@@ -52,28 +55,34 @@ set splitright
 set splitbelow
 set virtualedit=block
 set wildmenu
+"set wildmode=longest:full,full
 
 set textwidth=100
 set background=dark
 
+set wildignore+=*.o,*.mod,*.pyc
+
 " Generic bindings
+let mapleader=" "
+
 set listchars=tab:➟\ ,eol:⤦,trail:·
 nmap <silent> <leader>l :set list!<CR>
 nmap <silent> <C-n> :tabprevious<CR>
 nmap <silent> <C-m> :tabnext<CR>
 
+
 " NERDTree
 map <silent> <F2> :NERDTreeToggle<CR>
-let NERDTreeIgnore = ['\.o$', '\.mod$', '\.pyc']
+let NERDTreeIgnore = ['\.o$', '\.mod$', '\.pyc$']
 
 " Line length limit for git commit messages body
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
-autocmd FileType tex setl ts=2 sw=2
-autocmd FileType fortran setl ts=2 sw=2
+autocmd FileType tex setlocal ts=2 sw=2
+autocmd FileType fortran setlocal ts=2 sw=2
 
 " Haskell
-autocmd FileType haskell setl ts=2 sw=2
+autocmd FileType haskell setlocal ts=2 sw=2
 autocmd FileType haskell map <silent> <F3> :HdevtoolsType<CR>
 autocmd FileType haskell map <silent> <F4> :HdevtoolsClear<CR>
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
