@@ -58,14 +58,12 @@ set background=dark
 
 " Generic bindings
 set listchars=tab:➟\ ,eol:⤦,trail:·
-map <leader>l :set list!<CR>
-map <Leader>n <esc>:tabprevious<CR>
-map <Leader>m <esc>:tabnext<CR>
-
-nnoremap Q gq}
+nmap <silent> <leader>l :set list!<CR>
+nmap <silent> <C-n> :tabprevious<CR>
+nmap <silent> <C-m> :tabnext<CR>
 
 " NERDTree
-map <silent> <F2> :NERDTreeToggle
+map <silent> <F2> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.o$', '\.mod$', '\.pyc']
 
 " Line length limit for git commit messages body
@@ -76,8 +74,8 @@ autocmd FileType fortran setl ts=2 sw=2
 
 " Haskell
 autocmd FileType haskell setl ts=2 sw=2
-autocmd FileType haskell map <silent> <F3> :HdevtoolsType
-autocmd FileType haskell map <silent> <F4> :HdevtoolsClear
+autocmd FileType haskell map <silent> <F3> :HdevtoolsType<CR>
+autocmd FileType haskell map <silent> <F4> :HdevtoolsClear<CR>
 autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
 
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
