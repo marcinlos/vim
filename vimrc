@@ -67,6 +67,7 @@ let mapleader=" "
 
 set showbreak=…
 set linebreak
+set scrolloff=4
 
 set listchars=tab:➟\ ,eol:⤦,trail:·
 nmap <silent> <leader>l :set list!<CR>
