@@ -65,6 +65,9 @@ set wildignore+=*.o,*.mod,*.pyc
 " Generic bindings
 let mapleader=" "
 
+set showbreak=…
+set linebreak
+
 set listchars=tab:➟\ ,eol:⤦,trail:·
 nmap <silent> <leader>l :set list!<CR>
 nmap <silent> <C-n> :tabprevious<CR>
