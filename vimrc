@@ -23,6 +23,10 @@ endif
 "Plugin 'jlanzarotta/bufexplorer' 
 "Plugin 'wincent/command-t' 
 
+
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
 " Tags
 Plugin 'xolox/vim-misc' 
 Plugin 'xolox/vim-easytags' 
@@ -89,6 +93,8 @@ set listchars=tab:➟\ ,eol:⤦,trail:·
 nmap <silent> <leader>l :set list!<CR>
 nmap <silent> <C-n> :tabprevious<CR>
 nmap <silent> <C-m> :tabnext<CR>
+
+let g:UltiSnipsExpandTrigger="<C-j>"
 
 
 " NERDTree
