@@ -18,6 +18,7 @@ Plugin 'haya14busa/incsearch.vim'
 
 if v:version >= 702
     Plugin 'Shougo/unite.vim'
+    Plugin 'bling/vim-airline'
 endif
 
 "Plugin 'jlanzarotta/bufexplorer'
@@ -64,6 +65,12 @@ let g:molokai_original=1
 let g:rehash256=1
 "colorscheme gruvbox
 "let g:gruvbox_italic=0
+
+if v:version >= 702
+    let g:airline_theme = 'my_molokai'
+    set laststatus=2
+endif
+
 
 
 " General settings
