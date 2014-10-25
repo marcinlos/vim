@@ -12,7 +12,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-commentary' 
+Plugin 'tpope/vim-commentary'
 Plugin 'godlygeek/tabular'
 Plugin 'haya14busa/incsearch.vim'
 
@@ -20,16 +20,16 @@ if v:version >= 702
     Plugin 'Shougo/unite.vim'
 endif
 
-"Plugin 'jlanzarotta/bufexplorer' 
-"Plugin 'wincent/command-t' 
+"Plugin 'jlanzarotta/bufexplorer'
+"Plugin 'wincent/command-t'
 
 
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
 " Tags
-Plugin 'xolox/vim-misc' 
-Plugin 'xolox/vim-easytags' 
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
 
 " Color scheme
 Plugin 'morhetz/gruvbox'
