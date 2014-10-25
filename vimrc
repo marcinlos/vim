@@ -26,6 +26,10 @@ endif
 Plugin 'xolox/vim-misc' 
 Plugin 'xolox/vim-easytags' 
 
+" Color scheme
+Plugin 'morhetz/gruvbox'
+Plugin 'tomasr/molokai'
+
 
 Plugin 'Valloric/YouCompleteMe'
 
@@ -33,7 +37,7 @@ Plugin 'idris-hackers/idris-vim'
 
 " Haskell plugins
 "Plugin 'bitc/vim-hdevtools'
-" vimproc is needed by ghcmod-vim
+"vimproc is needed by ghcmod-vim
 Plugin 'Shougo/vimproc.vim'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'eagletmt/neco-ghc'
@@ -45,6 +49,13 @@ filetype plugin indent on
 set encoding=utf-8
 
 syntax on
+
+" Color scheme settings
+set t_Co=256
+colorscheme molokai
+"colorscheme gruvbox
+"let g:gruvbox_italic=0
+
 
 set tabstop=4
 set shiftwidth=4
