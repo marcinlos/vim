@@ -50,13 +50,18 @@ set encoding=utf-8
 
 syntax on
 
-" Color scheme settings
+" Display settings
+set background=dark
 set t_Co=256
+
 colorscheme molokai
+let g:molokai_original=1
+let g:rehash256=1
 "colorscheme gruvbox
 "let g:gruvbox_italic=0
 
 
+" General settings
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -69,7 +74,6 @@ set wildmenu
 "set wildmode=longest:full,full
 
 set textwidth=100
-set background=dark
 
 set wildignore+=*.o,*.mod,*.pyc
 
