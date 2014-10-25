@@ -14,6 +14,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary' 
 Plugin 'godlygeek/tabular'
+Plugin 'haya14busa/incsearch.vim'
 
 if v:version >= 702
     Plugin 'Shougo/unite.vim'
@@ -93,6 +94,11 @@ nmap <silent> <C-m> :tabnext<CR>
 " NERDTree
 map <silent> <F2> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.o$', '\.mod$', '\.pyc$']
+
+" incsearch
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
 
 " Line length limit for git commit messages body
 autocmd Filetype gitcommit setlocal spell textwidth=72
