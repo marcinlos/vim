@@ -58,11 +58,17 @@ syntax on
 
 " Display settings
 set background=dark
-set t_Co=256
+
+if has('gui_running')
+    set guifont=Consolas\ 10
+else
+    set t_Co=256
+endif
 
 colorscheme molokai
 let g:molokai_original=1
 let g:rehash256=1
+set cursorline
 "colorscheme gruvbox
 "let g:gruvbox_italic=0
 
