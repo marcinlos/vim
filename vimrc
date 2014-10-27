@@ -39,15 +39,15 @@ Plugin 'tomasr/molokai'
 
 Plugin 'Valloric/YouCompleteMe'
 
-Plugin 'idris-hackers/idris-vim'
+"Plugin 'idris-hackers/idris-vim'
 
 " Haskell plugins
 "Plugin 'bitc/vim-hdevtools'
 "vimproc is needed by ghcmod-vim
-Plugin 'Shougo/vimproc.vim'
-Plugin 'eagletmt/ghcmod-vim'
-Plugin 'eagletmt/neco-ghc'
-Plugin 'dag/vim2hs'
+"Plugin 'Shougo/vimproc.vim'
+"Plugin 'eagletmt/ghcmod-vim'
+"Plugin 'eagletmt/neco-ghc'
+"Plugin 'dag/vim2hs'
 
 call vundle#end()
 filetype plugin indent on
