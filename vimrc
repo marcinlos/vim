@@ -33,7 +33,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 
 " Color scheme
-Plugin 'morhetz/gruvbox'
+"Plugin 'morhetz/gruvbox'
 Plugin 'tomasr/molokai'
 
 
