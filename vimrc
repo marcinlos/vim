@@ -110,6 +110,7 @@ set listchars=tab:➟\ ,eol:⤦,trail:·
 nmap <silent> <leader>l :set list!<CR>
 nmap <silent> <C-n> :tabprevious<CR>
 nmap <silent> <C-m> :tabnext<CR>
+nmap <silent> <leader>s :set spell!<CR>
 
 let g:UltiSnipsExpandTrigger="<C-j>"
 
