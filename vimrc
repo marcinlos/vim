@@ -81,7 +81,7 @@ if v:version >= 702
     set noshowmode
 endif
 
-
+set lazyredraw
 
 " General settings
 set tabstop=4
