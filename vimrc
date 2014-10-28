@@ -108,8 +108,8 @@ set scrolloff=4
 
 set listchars=tab:➟\ ,eol:⤦,trail:·
 nmap <silent> <leader>l :set list!<CR>
-nmap <silent> <C-n> :tabprevious<CR>
-nmap <silent> <C-m> :tabnext<CR>
+nnoremap <silent> <C-k> :tabnext<CR>
+nnoremap <silent> <C-j> :tabprevious<CR>
 nmap <silent> <leader>s :set spell!<CR>
 
 let g:UltiSnipsExpandTrigger="<C-j>"
