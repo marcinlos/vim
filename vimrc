@@ -77,13 +77,18 @@ set cursorline
 "let g:gruvbox_italic=0
 
 if v:version >= 702
-    let g:airline_theme = 'my_molokai'
+    if !has('gui_running')
+        let g:airline_theme = 'my_molokai'
+    endif
     "let g:airline_powerline_fonts = 1
     let g:airline_left_sep = ''
     let g:airline_right_sep = ''
     set laststatus=2
     set noshowmode
 endif
+
+" Set leader
+"let mapleader=" "
 
 set lazyredraw
 
@@ -104,7 +109,6 @@ set textwidth=100
 set wildignore+=*.o,*.mod,*.pyc
 
 " Generic bindings
-let mapleader=" "
 
 set showbreak=…
 set linebreak
