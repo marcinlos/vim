@@ -17,6 +17,7 @@ Plugin 'godlygeek/tabular'
 Plugin 'haya14busa/incsearch.vim'
 
 if v:version >= 702
+    Plugin 'Shougo/vimproc.vim'
     Plugin 'Shougo/unite.vim'
     Plugin 'bling/vim-airline'
 endif
@@ -44,7 +45,6 @@ Plugin 'Valloric/YouCompleteMe'
 " Haskell plugins
 "Plugin 'bitc/vim-hdevtools'
 "vimproc is needed by ghcmod-vim
-"Plugin 'Shougo/vimproc.vim'
 "Plugin 'eagletmt/ghcmod-vim'
 "Plugin 'eagletmt/neco-ghc'
 "Plugin 'dag/vim2hs'
