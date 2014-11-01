@@ -61,6 +61,10 @@ set background=dark
 
 if has('gui_running')
     set guifont=Consolas\ 10
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
+    set guioptions-=L
 else
     set t_Co=256
 endif
