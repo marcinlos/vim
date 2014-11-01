@@ -91,6 +91,7 @@ endif
 "let mapleader=" "
 
 set lazyredraw
+runtime! ftplugin/man.vim
 
 " General settings
 set tabstop=4
