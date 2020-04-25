@@ -28,7 +28,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug'
 
 " Directory explorer
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 
 " Syntax checkers for many a language
 Plug 'scrooloose/syntastic'
@@ -46,7 +46,7 @@ Plug 'tpope/vim-endwise'       " insert matching structure endings
 Plug 'tpope/vim-abolish'       " smart substitutions and case conversion
 
 " Regexp-based aligning
-Plug 'godlygeek/tabular'
+Plug 'godlygeek/tabular', {'on': 'Tabularize'}
 
 " Better incremental search
 Plug 'haya14busa/incsearch.vim'
