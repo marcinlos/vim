@@ -64,7 +64,9 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " Tags
-Plug 'ludovicchabant/vim-gutentags'
+if has('job')
+    Plug 'ludovicchabant/vim-gutentags'
+endif
 
 " Color scheme
 Plug 'tomasr/molokai'
