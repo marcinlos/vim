@@ -123,6 +123,7 @@ let g:airline#extensions#tabline#buffer_min_count = 2
 " don't show the close button in buffer/tab list
 let g:airline#extensions#tabline#show_close_button = 0
 
+" Use Powerline fonts by default (disable if not available)
 let g:airline_powerline_fonts = 1
 
 " }
