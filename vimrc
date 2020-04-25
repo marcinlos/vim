@@ -14,66 +14,69 @@ set mouse=a
 
 "### Plugin management
 " {
-filetype off
 
-set runtimepath+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Download vim-plug if necessary
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
 
 " Plugin manager
-Plugin 'gmarik/Vundle.vim'
+Plug 'junegunn/vim-plug'
 
 " Directory explorer
-Plugin 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 
 " Syntax checkers for many a language
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 
 " Git integration
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " Editing enhancements
-Plugin 'tpope/vim-surround'      " surround object with delimiters
-Plugin 'tpope/vim-repeat'        " better dot
-Plugin 'tpope/vim-commentary'    " comment/uncomment region
-Plugin 'tpope/vim-unimpaired'    " [/]-based location and option switches
-Plugin 'tpope/vim-endwise'       " insert matching structure endings
-Plugin 'tpope/vim-abolish'       " smart substitutions and case conversion
+Plug 'tpope/vim-surround'      " surround object with delimiters
+Plug 'tpope/vim-repeat'        " better dot
+Plug 'tpope/vim-commentary'    " comment/uncomment region
+Plug 'tpope/vim-unimpaired'    " [/]-based location and option switches
+Plug 'tpope/vim-endwise'       " insert matching structure endings
+Plug 'tpope/vim-abolish'       " smart substitutions and case conversion
 
 " Regexp-based aligning
-Plugin 'godlygeek/tabular'
+Plug 'godlygeek/tabular'
 
 " Better incremental search
-Plugin 'haya14busa/incsearch.vim'
+Plug 'haya14busa/incsearch.vim'
 
 " Fuzzy search for everything
-Plugin 'Shougo/vimproc.vim'
-Plugin 'Shougo/unite.vim'
+Plug 'Shougo/vimproc.vim', {'do': 'make' }
+Plug 'Shougo/unite.vim'
 
 " Syntax
-Plugin 'tpope/vim-git'
-Plugin 'neovimhaskell/haskell-vim'
+Plug 'tpope/vim-git'
+Plug 'neovimhaskell/haskell-vim'
 
 " Snippets
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Tags
-Plugin 'ludovicchabant/vim-gutentags'
+Plug 'ludovicchabant/vim-gutentags'
 
 " Color scheme
-Plugin 'tomasr/molokai'
-Plugin 'morhetz/gruvbox'
+Plug 'tomasr/molokai'
+Plug 'morhetz/gruvbox'
 
 " Status line
-Plugin 'bling/vim-airline'
+Plug 'bling/vim-airline'
 
 " Autocomplete for Python/C++/...
 " Needs to be compiled!
-" Plugin 'ycm-core/YouCompleteMe'
+" Plug 'ycm-core/YouCompleteMe'
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 " }
 
 syntax on
