@@ -309,7 +309,7 @@ hi! link SyntasticStyleWarningSign  GruvboxAquaSign
 noremap <silent>  <Leader>cc  :SyntasticCheck<CR>
 noremap <silent>  <Leader>cl  :Errors<CR>
 noremap <silent>  <Leader>cr  :SyntasticReset<CR>
-noremap <silent>  <Leader>ct  :SyntasticToggle<CR>
+noremap <silent>  <Leader>ct  :SyntasticToggleMode<CR>
 
 
 "# fugitive
