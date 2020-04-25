@@ -1,4 +1,5 @@
 .netrwhist
 *.swp
-bundle/*
+plugged
 undo
+autoload/plug.vim
