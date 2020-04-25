@@ -31,7 +31,7 @@ Plug 'junegunn/vim-plug'
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
 
 " Syntax checkers for many a language
-Plug 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic', {'on': ['SyntasticCheck', 'SyntasticToggle']}
 
 " Git integration
 Plug 'tpope/vim-fugitive'
@@ -125,6 +125,9 @@ let g:airline#extensions#tabline#show_close_button = 0
 
 " Use Powerline fonts by default (disable if not available)
 let g:airline_powerline_fonts = 1
+
+" Disable integration with Syntastic to allow lazy loading it
+let g:airline#extensions#syntastic#enabled = 0
 
 " }
 
