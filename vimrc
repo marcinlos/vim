@@ -207,6 +207,9 @@ set matchpairs+=<:>   " highlight matching < and >
 set undofile
 set undodir=~/.vim/undo
 
+" Put viminfo file inside .vim
+set viminfo+=n~/.vim/.viminfo
+
 set nofoldenable      " start with open folds
 set foldmethod=syntax " create folds automatically based on indentation
 
