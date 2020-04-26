@@ -91,7 +91,7 @@ set background=dark
 
 " Disable some UI elements in gVim
 if has('gui_running')
-    set guifont=Consolas\ 10
+    let &guifont = 'Hack Nerd Font Mono 10'
     set guioptions-=m      " no menu bar
     set guioptions-=T      " no toolbar
     set guioptions-=r      " no right scrollbar
