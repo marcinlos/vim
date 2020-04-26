@@ -69,7 +69,6 @@ if has('job')
 endif
 
 " Color scheme
-Plug 'tomasr/molokai'
 Plug 'morhetz/gruvbox'
 
 " Status line
