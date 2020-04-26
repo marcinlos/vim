@@ -57,6 +57,7 @@ Plug 'Shougo/unite.vim'
 
 " Syntax
 Plug 'tpope/vim-git'
+Plug 'tpope/vim-markdown'
 Plug 'neovimhaskell/haskell-vim'
 
 " Snippets
@@ -443,6 +444,12 @@ nnoremap <silent> <Leader>l  :<C-u>Unite
 
 " Bring back last Unite buffer
 nnoremap <silent> <Leader>r  :<C-u>UniteResume -restore<CR>
+
+
+"# markdown
+
+" Enable syntax highlighting for python
+let g:markdown_fenced_languages = ['python']
 
 
 "# gutentags
