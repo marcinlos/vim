@@ -82,8 +82,6 @@ Plug 'bling/vim-airline'
 call plug#end()
 " }
 
-syntax on
-
 
 "### Display settings
 
