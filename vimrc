@@ -35,7 +35,7 @@ Plug 'scrooloose/syntastic', {'on': ['SyntasticCheck', 'SyntasticToggle']}
 
 " Git integration
 Plug 'tpope/vim-fugitive'
-Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter', {'on': 'GitGutterToggle'}
 
 " Editing enhancements
 Plug 'tpope/vim-surround'      " surround object with delimiters
