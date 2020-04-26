@@ -280,6 +280,9 @@ let g:NERDTreeDirArrows = 1
 " Don't show compilation producst
 let g:NERDTreeIgnore = ['\.o$', '\.mod$', '\.pyc$']
 
+" Bookmark file location
+let g:NERDTreeBookmarksFile = glob('~/.vim/.NERDTreeBookmarks')
+
 
 "# Syntastic
 
