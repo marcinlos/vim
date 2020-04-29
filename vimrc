@@ -261,6 +261,8 @@ map Y y$
 command! -range=% CleanTrailingSpaces keeppatterns <line1>,<line2>s/\s\+$//e
 noremap <silent>  <Leader>w  :CleanTrailingSpaces<CR>
 
+" Make Ctrl-l clear highlighting and update diff as well
+nnoremap <silent>  <C-l>  :nohlsearch<Bar>diffupdate<CR><C-l>
 
 let g:UltiSnipsExpandTrigger="<C-j>"
 
