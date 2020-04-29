@@ -227,29 +227,29 @@ endif
 nnoremap <silent>   <Leader><Leader>   :update<CR>
 
 " Moving between buffers
-nnoremap <silent>   <C-k>      :bnext<CR>
-nnoremap <silent>   <C-j>      :bprevious<CR>
+nnoremap <silent>   <C-K>      :bnext<CR>
+nnoremap <silent>   <C-J>      :bprevious<CR>
 
 " Moving between tabs
-nnoremap <silent>   <C-n>      :tabnext<CR>
-nnoremap <silent>   <C-p>      :tabprevious<CR>
+nnoremap <silent>   <C-N>      :tabnext<CR>
+nnoremap <silent>   <C-P>      :tabprevious<CR>
 
 " Indent in visual mode without losing selection
 xnoremap <   <gv
 xnoremap >   >gv
 
 " Unindent in insert mode using S-Tab
-inoremap <S-Tab>    <C-d>
+inoremap <S-Tab>    <C-D>
 
-" Allow undo for deletions using Ctrl-w/u in insert mode
-" (<C-g>u breaks undo sequence)
-inoremap <C-w>      <C-g>u<C-w>
-inoremap <C-u>      <C-g>u<C-u>
+" Allow undo for deletions using C-W/U in insert mode
+" (<C-G>u breaks undo sequence)
+inoremap <C-W>      <C-G>u<C-W>
+inoremap <C-U>      <C-G>u<C-U>
 
-" Use Ctrl-n/p to drill into subdirectories when opening file
-cnoremap <C-n>      <Down>
-cnoremap <C-p>      <Up>
-let &wildcharm = &wildchar   " workaround, Ctrl-n doesn't work w/o this
+" Use C-N/P to drill into subdirectories when opening file
+cnoremap <C-N>      <Down>
+cnoremap <C-P>      <Up>
+let &wildcharm = &wildchar   " workaround, C-N doesn't work w/o this
 
 " Disable Ex mode, format instead
 map Q gq
@@ -261,10 +261,10 @@ map Y y$
 command! -range=% CleanTrailingSpaces keeppatterns <line1>,<line2>s/\s\+$//e
 noremap <silent>  <Leader>w  :CleanTrailingSpaces<CR>
 
-" Make Ctrl-l clear highlighting and update diff as well
-nnoremap <silent>  <C-l>  :nohlsearch<Bar>diffupdate<CR><C-l>
+" Make C-L clear highlighting and update diff as well
+nnoremap <silent>  <C-L>  :nohlsearch<Bar>diffupdate<CR><C-L>
 
-let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsExpandTrigger="<C-J>"
 
 
 "### Plugin configuration
@@ -407,7 +407,7 @@ endif
 " Mappings
 
 " Find file (recursive)
-nnoremap <silent> <Leader>f  :<C-u>Unite
+nnoremap <silent> <Leader>f  :<C-U>Unite
             \ -buffer-name=files
             \ -resume
             \ -no-restore
@@ -415,7 +415,7 @@ nnoremap <silent> <Leader>f  :<C-u>Unite
             \ file_rec/async:!<CR>
 
 " Find file in project
-nnoremap <silent> <Leader>pf :<C-u>Unite
+nnoremap <silent> <Leader>pf :<C-U>Unite
             \ -buffer-name=git-files
             \ -resume
             \ -no-restore
@@ -423,33 +423,33 @@ nnoremap <silent> <Leader>pf :<C-u>Unite
             \ file_rec/git<CR>
 
 " Grep all files
-nnoremap <silent> <Leader>g  :<C-u>Unite
+nnoremap <silent> <Leader>g  :<C-U>Unite
             \ -buffer-name=grep
             \ -no-start-insert
             \ grep<CR>
 
 " Grep project files
-nnoremap <silent> <Leader>pg :<C-u>Unite
+nnoremap <silent> <Leader>pg :<C-U>Unite
             \ -buffer-name=grep
             \ -no-start-insert
             \ grep/git::-i<CR>
 
 " Resume previous grep search
-nnoremap <silent> <Leader>G  :<C-u>UniteResume grep<CR>
+nnoremap <silent> <Leader>G  :<C-U>UniteResume grep<CR>
 
 " Select buffer
-nnoremap <silent> <Leader>b  :<C-u>Unite
+nnoremap <silent> <Leader>b  :<C-U>Unite
             \ -buffer-name=buffers
             \ -no-start-insert
             \ buffer<CR>
 
 " Search for lines in current buffer
-nnoremap <silent> <Leader>l  :<C-u>Unite
+nnoremap <silent> <Leader>l  :<C-U>Unite
             \ -buffer-name=lines
             \ line<CR>
 
 " Bring back last Unite buffer
-nnoremap <silent> <Leader>r  :<C-u>UniteResume -restore<CR>
+nnoremap <silent> <Leader>r  :<C-U>UniteResume -restore<CR>
 
 
 "# markdown
