@@ -59,6 +59,7 @@ Plug 'Shougo/unite.vim'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-markdown'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'tmux-plugins/vim-tmux'
 
 " Snippets
 Plug 'SirVer/ultisnips'
