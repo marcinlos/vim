@@ -483,5 +483,8 @@ augroup CustomFileTypeSettings
     " Use python3 completion
     autocmd FileType python  setlocal omnifunc=python3complete#Complete
 
+    " Automatically generated indents in gitconfig are tabs
+    autocmd FileType gitconfig setlocal noexpandtab
+
 augroup END
 
