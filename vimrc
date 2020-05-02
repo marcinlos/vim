@@ -486,5 +486,8 @@ augroup CustomFileTypeSettings
     " Automatically generated indents in gitconfig are tabs
     autocmd FileType gitconfig setlocal noexpandtab
 
+    " Recognize .gp files as gnuplot scripts
+    autocmd BufNewFile,BufRead *.gp setlocal filetype=gnuplot
+
 augroup END
 
