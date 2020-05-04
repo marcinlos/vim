@@ -4,4 +4,6 @@
 *.swp
 plugged
 undo
+backup
+swap
 autoload/plug.vim
