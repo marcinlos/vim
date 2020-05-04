@@ -186,6 +186,9 @@ set linebreak         " only break lines at specified characters
 set scrolloff=4       " keep some space when cursor is near top/bottom
 set display+=lastline " display as much of the last line as possible
 
+set visualbell        " no beeping on errors
+set t_vb=             " no visual bell
+
 " Characters displayed by :list
 set listchars=tab:➟\ ,eol:⤦,trail:·
 
