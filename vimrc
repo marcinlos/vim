@@ -83,6 +83,14 @@ Plug 'bling/vim-airline'
 call plug#end()
 " }
 
+" Auxiliary function to make setting paths easier
+function! MakeDirInDotVim(name)
+    let path = glob('~/.vim/') . a:name
+    if !isdirectory(path)
+        call mkdir(path, 'p')
+    endif
+    return path
+endfunction
 
 "### Display settings
 
@@ -207,7 +215,11 @@ set matchpairs+=<:>   " highlight matching < and >
 
 " Persistent undo
 set undofile
-set undodir=~/.vim/undo
+
+" Store swap, backup and undo files out of sight
+let &undodir = MakeDirInDotVim('undo')
+let &backupdir = MakeDirInDotVim('backup')
+let &directory = MakeDirInDotVim('swap')
 
 " Put viminfo file inside .vim
 set viminfo+=n~/.vim/.viminfo
