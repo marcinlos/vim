@@ -213,6 +213,8 @@ set hidden            " don't unload abandoned buffers
 
 set matchpairs+=<:>   " highlight matching < and >
 
+set completeopt+=menuone  " show popup on completion even for one match
+
 " Persistent undo
 set undofile
 
