@@ -227,7 +227,7 @@ let &directory = MakeDirInDotVim('swap')
 set viminfo+=n~/.vim/.viminfo
 
 set nofoldenable      " start with open folds
-set foldmethod=syntax " create folds automatically based on indentation
+set foldmethod=indent " create folds automatically based on indentation
 
 " Enable globstar for recursive file matching in grep etc.
 if &shell =~# 'bash'
