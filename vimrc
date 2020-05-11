@@ -1,7 +1,4 @@
 
-" Disable vi compatibility
-set nocompatible
-
 " Use utf-8 as the internal encoding
 set encoding=utf-8
 
