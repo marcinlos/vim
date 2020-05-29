@@ -63,7 +63,7 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " Tags
-if has('job')
+if executable('ctags') && has('job')
     Plug 'ludovicchabant/vim-gutentags'
 endif
 
