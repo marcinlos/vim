@@ -489,7 +489,7 @@ augroup CustomFileTypeSettings
         \ endif
 
     " Use tab of size 2 in some languages
-    autocmd FileType tex,fortran,haskell setlocal tabstop=2 shiftwidth=2
+    autocmd FileType tex,fortran,haskell,cmake setlocal tabstop=2 shiftwidth=2
 
     " Use one-line // comments in C and C++
     autocmd FileType c,cpp setlocal commentstring=//\ %s
