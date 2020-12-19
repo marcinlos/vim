@@ -491,9 +491,6 @@ augroup CustomFileTypeSettings
     " Use tab of size 2 in some languages
     autocmd FileType tex,fortran,haskell,cmake setlocal tabstop=2 shiftwidth=2
 
-    " Use one-line // comments in C and C++
-    autocmd FileType c,cpp setlocal commentstring=//\ %s
-
     " Line length limit for git commit messages body
     autocmd FileType gitcommit setlocal spell textwidth=72
 
