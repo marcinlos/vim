@@ -7,3 +7,4 @@ undo
 backup
 swap
 autoload/plug.vim
+autoload/plug.vim.old
