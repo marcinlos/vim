@@ -1,0 +1,21 @@
+# Catch2 snippets
+
+snippet test "Catch2 test case"
+TEST_CASE("${1:name}") {
+	${2}
+}
+endsnippet
+
+snippet sec "Catch2 section"
+SECTION("${1:name}") {
+	${2}
+}
+endsnippet
+
+snippet re "REQUIRE(...)"
+REQUIRE(${1});
+endsnippet
+
+snippet ch "CHECK(....)"
+CHECK(${1});
+endsnippet
