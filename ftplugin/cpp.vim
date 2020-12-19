@@ -19,3 +19,6 @@ endfunction
 
 " Auto-format before write write
 " autocmd BufWritePre <buffer> call FormatOnSave()
+
+" Surround with /* */ using /
+let b:surround_47 = "/*\r*/"
