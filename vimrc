@@ -48,6 +48,9 @@ Plug 'godlygeek/tabular', {'on': 'Tabularize'}
 " Better incremental search
 Plug 'haya14busa/incsearch.vim'
 
+" Jump to target
+Plug 'easymotion/vim-easymotion'
+
 " Fuzzy search for everything
 Plug 'Shougo/vimproc.vim', {'do': 'make' }
 Plug 'Shougo/unite.vim'
@@ -381,6 +384,19 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
+
+
+"# EasyMotion
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+let g:EasyMotion_smartcase = 1  " Use smartcase like in vanilla vim
+let g:EasyMotion_use_upper = 1  " Display labels using uppercase
+let g:EasyMotion_keys = 'ASDGHKLQWERTYUIOPZXCVBNMFJ;'
+
+" two-character search
+nmap s <Plug>(easymotion-s2)
+
+" vertical line search
+nmap <Leader>jl   <Plug>(easymotion-j)
 
 
 "# Unite
