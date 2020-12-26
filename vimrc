@@ -393,7 +393,7 @@ let g:EasyMotion_use_upper = 1  " Display labels using uppercase
 let g:EasyMotion_keys = 'ASDGHKLQWERTYUIOPZXCVBNMFJ;'
 
 " two-character search
-nmap s <Plug>(easymotion-s2)
+nmap <Leader>s <Plug>(easymotion-s2)
 
 " vertical line search
 nmap <Leader>jl   <Plug>(easymotion-j)
