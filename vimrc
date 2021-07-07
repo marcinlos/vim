@@ -42,6 +42,9 @@ Plug 'tpope/vim-unimpaired'    " [/]-based location and option switches
 Plug 'tpope/vim-endwise'       " insert matching structure endings
 Plug 'tpope/vim-abolish'       " smart substitutions and case conversion
 
+" File management
+Plug 'tpope/vim-eunuch'
+
 " Regexp-based aligning
 Plug 'godlygeek/tabular', {'on': 'Tabularize'}
 
