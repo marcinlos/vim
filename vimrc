@@ -32,6 +32,7 @@ Plug 'scrooloose/syntastic', {'on': ['SyntasticCheck', 'SyntasticToggle']}
 
 " Git integration
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 Plug 'airblade/vim-gitgutter'
 
 " Editing enhancements
