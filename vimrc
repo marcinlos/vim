@@ -55,9 +55,9 @@ Plug 'haya14busa/incsearch.vim'
 " Jump to target
 Plug 'easymotion/vim-easymotion'
 
-" Fuzzy search for everything
-Plug 'Shougo/vimproc.vim', {'do': 'make' }
-Plug 'Shougo/unite.vim'
+" Fuzzy search
+Plug 'junegunn/fzf', {'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 " Syntax
 Plug 'tpope/vim-git'
@@ -403,88 +403,55 @@ nmap <Leader>s <Plug>(easymotion-s2)
 nmap <Leader>jl   <Plug>(easymotion-j)
 
 
-"# Unite
+"# Fzf
 
-" Use default matcher (use 'matcher_fuzzy' for fuzzy matcher)
-call unite#filters#matcher_default#use(['matcher_context'])
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Comment'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
 
-" Sort matches by accuracy
-call unite#filters#sorter_default#use(['sorter_rank'])
+command! -bang -nargs=* GGrep
+    \ call fzf#vim#grep(
+    \ "git grep --column --line-number --no-heading --color=always ".shellescape(<q-args>), 1,
+    \ {'options': '--delimiter : --nth 4..'},
+    \ <bang>0)
 
-" Default search window settings:
-" - start inserting narrowing text immediately
-" - place the search window on the bottom
-" - place the prompt on top of search window
-" - use custom prompt
-" - use smartcase in search
-call unite#custom#profile('default', 'context', {
-\   'start_insert'     : 1,
-\   'direction'        : 'botright',
-\   'prompt_direction' : 'top',
-\   'prompt'           : '➤ ',
-\   'smartcase'        : 1,
-\ })
-
-" Use ag if available
-if executable('ag')
-    " file_rec/async
-    let g:unite_source_rec_async_command =
-    \ ['ag', '--follow', '--nocolor', '--nogroup', '--hidden', '-g', '']
-
-    " grep
-    let g:unite_source_grep_command = 'ag'
-    let g:unite_source_grep_default_opts =
-    \ '-i --vimgrep --hidden ' .
-    \ '--ignore ''.git'' --ignore ''.svn'' --ignore ''.hg'' --ignore ''.bzr'''
-    let g:unite_source_grep_recursive_opt = ''
-endif
-
-" Mappings
-
-" Find file (recursive)
-nnoremap <silent> <Leader>f  :<C-U>Unite
-            \ -buffer-name=files
-            \ -resume
-            \ -no-restore
-            \ -input=
-            \ file_rec/async:!<CR>
+" Find file
+nnoremap <silent> <Leader>f  :<C-U>Files<CR>
 
 " Find file in project
-nnoremap <silent> <Leader>pf :<C-U>Unite
-            \ -buffer-name=git-files
-            \ -resume
-            \ -no-restore
-            \ -input=
-            \ file_rec/git<CR>
+nnoremap <silent> <Leader>pf :<C-U>GFiles<CR>
 
 " Grep all files
-nnoremap <silent> <Leader>g  :<C-U>Unite
-            \ -buffer-name=grep
-            \ -no-start-insert
-            \ grep<CR>
+nnoremap <silent> <Leader>g  :<C-U>Ag<CR>
 
 " Grep project files
-nnoremap <silent> <Leader>pg :<C-U>Unite
-            \ -buffer-name=grep
-            \ -no-start-insert
-            \ grep/git::-i<CR>
-
-" Resume previous grep search
-nnoremap <silent> <Leader>G  :<C-U>UniteResume grep<CR>
+nnoremap <silent> <Leader>pg :<C-U>GGrep<CR>
 
 " Select buffer
-nnoremap <silent> <Leader>b  :<C-U>Unite
-            \ -buffer-name=buffers
-            \ -no-start-insert
-            \ buffer<CR>
+nnoremap <silent> <Leader>b  :<C-U>Buffers<CR>
 
 " Search for lines in current buffer
-nnoremap <silent> <Leader>l  :<C-U>Unite
-            \ -buffer-name=lines
-            \ line<CR>
+nnoremap <silent> <Leader>l  :<C-U>BLines<CR>
 
-" Bring back last Unite buffer
-nnoremap <silent> <Leader>r  :<C-U>UniteResume -restore<CR>
+" Search for lines in all buffers
+nnoremap <silent> <Leader>L  :<C-U>Lines<CR>
+
+" Search for commits
+nnoremap <silent> <Leader>vc :<C-U>Commits<CR>
+
+" Search for help tags
+nnoremap <silent> <Leader>H :<C-U>Helptags<CR>
 
 
 "# markdown
