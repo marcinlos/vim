@@ -249,6 +249,8 @@ endif
 " Easily save file
 nnoremap <silent>   <Leader><Leader>   :update<CR>
 
+cnoremap %% <C-R>=fnameescape(expand('%:h')) . '/' <CR>
+
 " Moving between buffers
 nnoremap <silent>   <C-K>      :bnext<CR>
 nnoremap <silent>   <C-J>      :bprevious<CR>
