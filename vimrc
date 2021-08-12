@@ -59,6 +59,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf', {'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
+" Alternate files navigation
+Plug 'tpope/vim-projectionist'
+
 " Syntax
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-markdown'
