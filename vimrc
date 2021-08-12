@@ -480,7 +480,7 @@ augroup CustomFileTypeSettings
         \ endif
 
     " Use tab of size 2 in some languages
-    autocmd FileType tex,fortran,haskell,cmake setlocal tabstop=2 shiftwidth=2
+    autocmd FileType tex,fortran,haskell,cmake,yaml setlocal tabstop=2 shiftwidth=2
 
     " Line length limit for git commit messages body
     autocmd FileType gitcommit setlocal spell textwidth=72
