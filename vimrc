@@ -349,6 +349,7 @@ noremap <silent>  <Leader>ct  :SyntasticToggleMode<CR>
 nnoremap           <Leader>v<Space>  :Git<Space>
 nnoremap <silent>  <Leader>vv        :Git<CR>
 nnoremap <silent>  <Leader>vb        :Git blame<CR>
+nnoremap <silent>  <Leader>vl        :vertical :Git log<CR>
 
 
 "# git-gutter
