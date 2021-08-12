@@ -187,8 +187,6 @@ set wildignore+=*.mod " Fortran module files
 set wildignore+=*.pyc " Python bytecode
 set wildignore+=*.jar " Java JARs
 
-set path+=**          " recursive search for :edit
-
 " Patterns are case-insensitive, unless they contain capital letters
 set ignorecase
 set smartcase
