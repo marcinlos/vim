@@ -174,8 +174,6 @@ set number            " display line numbers
 set splitright        " new windows created to the right
 set splitbelow        " new windows created below
 
-set virtualedit=block " allow arbitrary cursor position in visual block mode
-
 " Display cmd line completions using wildmenu
 set wildmenu
 set wildmode=longest:full,full  " complete longest prefix, show wildmenu
