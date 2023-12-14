@@ -395,16 +395,17 @@ map g# <Plug>(incsearch-nohl-g#)
 
 
 "# EasyMotion
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1  " Use smartcase like in vanilla vim
 let g:EasyMotion_use_upper = 1  " Display labels using uppercase
 let g:EasyMotion_keys = 'ASDGHKLQWERTYUIOPZXCVBNMFJ;'
 
-" two-character search
-nmap <Leader>s <Plug>(easymotion-s2)
+" default conflicts with <Leader><Leader> save file mapping
+nmap <Leader>j <Plug>(easymotion-prefix)
+nmap <Leader>jl <Plug>(easymotion-overwin-line)
+nmap <Leader>j. <Plug>(easymotion-repeat)
 
-" vertical line search
-nmap <Leader>jl   <Plug>(easymotion-j)
+" two-character search
+nmap <Leader>s <Plug>(easymotion-overwin-f2)
 
 
 "# Fzf
