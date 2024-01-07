@@ -48,6 +48,12 @@ Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-entire'
 Plug 'kana/vim-textobj-fold'
 Plug 'michaeljsmith/vim-indent-object'
+
+" support for editing s-expressions
+Plug 'eraserhd/parinfer-rust', {'do': 'cargo build --release'}
+Plug 'benknoble/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+
 " File management
 Plug 'tpope/vim-eunuch'
 
@@ -484,7 +490,7 @@ augroup CustomFileTypeSettings
         \ endif
 
     " Use tab of size 2 in some languages
-    autocmd FileType tex,fortran,haskell,cmake,yaml setlocal tabstop=2 shiftwidth=2
+    autocmd FileType tex,fortran,haskell,scheme,cmake,yaml setlocal tabstop=2 shiftwidth=2
 
     " Line length limit for git commit messages body
     autocmd FileType gitcommit setlocal spell textwidth=72
