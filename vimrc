@@ -236,12 +236,16 @@ set completeopt+=menuone  " show popup on completion even for one match
 set undofile
 
 " Store swap, backup and undo files out of sight
-let &undodir = MakeDirInDotVim('undo')
-let &backupdir = MakeDirInDotVim('backup')
-let &directory = MakeDirInDotVim('swap')
+if !has('nvim')
+    let &undodir = MakeDirInDotVim('undo')
+    let &backupdir = MakeDirInDotVim('backup')
+    let &directory = MakeDirInDotVim('swap')
+end
 
 " Put viminfo file inside .vim
-set viminfo+=n~/.vim/.viminfo
+if !has('nvim')
+    set viminfo+=n~/.vim/.viminfo
+end
 
 set nofoldenable      " start with open folds
 set foldmethod=indent " create folds automatically based on indentation
