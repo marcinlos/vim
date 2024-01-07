@@ -83,6 +83,8 @@ Plug 'tmux-plugins/vim-tmux'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+Plug 'rhysd/reply.vim', { 'on': ['Repl', 'ReplAuto'] }
+
 " Tags
 if executable('ctags') && has('job')
     Plug 'ludovicchabant/vim-gutentags'
@@ -416,6 +418,16 @@ nmap <Leader>j. <Plug>(easymotion-repeat)
 " two-character search
 nmap <Leader>s <Plug>(easymotion-overwin-f2)
 
+
+"# reply
+let g:reply_repls =
+\ {
+\ 'scheme': [{-> reply#repl#base('sicp') } ]
+\ }
+
+nnoremap <silent> <Leader>r :<C-U>Repl<CR>
+nnoremap <silent> <LocalLeader><LocalLeader> :<C-U>ReplSend<CR>
+vnoremap <silent> <LocalLeader><LocalLeader> :<C-U>'<,'>ReplSend<CR>
 
 "# Fzf
 
