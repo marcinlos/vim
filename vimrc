@@ -91,7 +91,7 @@ if executable('ctags') && has('job')
 endif
 
 " Color scheme
-Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 
 " Status line
 Plug 'bling/vim-airline'
