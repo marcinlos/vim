@@ -43,6 +43,11 @@ Plug 'tpope/vim-unimpaired'    " [/]-based location and option switches
 Plug 'tpope/vim-endwise'       " insert matching structure endings
 Plug 'tpope/vim-abolish'       " smart substitutions and case conversion
 
+" Additional text objects
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-fold'
+Plug 'michaeljsmith/vim-indent-object'
 " File management
 Plug 'tpope/vim-eunuch'
 
