@@ -128,6 +128,7 @@ endif
 " Color scheme settings
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_guisp_fallback = 'fg'   " mark errors by changing fg color
+let g:gruvbox_invert_selection = 0
 colorscheme gruvbox
 
 " Highlight the line of the cursor
