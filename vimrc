@@ -78,6 +78,9 @@ Plug 'tpope/vim-git'
 Plug 'tpope/vim-markdown'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'tmux-plugins/vim-tmux'
+Plug 'cespare/vim-toml'
+
+Plug 'JuliaEditorSupport/julia-vim'
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -94,7 +97,7 @@ endif
 Plug 'gruvbox-community/gruvbox'
 
 " Status line
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
 
 " Autocomplete for Python/C++/...
 " Needs to be compiled!
@@ -129,6 +132,14 @@ endif
 let g:gruvbox_contrast_dark = 'hard'
 let g:gruvbox_guisp_fallback = 'fg'   " mark errors by changing fg color
 let g:gruvbox_invert_selection = 0
+let g:gruvbox_italic = 1
+
+" set termguicolors
+" if !has('gui_running') && &term =~ 'tmux'
+"   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" endif
+
 colorscheme gruvbox
 
 " Highlight the line of the cursor
@@ -484,6 +495,9 @@ nnoremap <silent> <Leader>vc :<C-U>Commits<CR>
 " Search for help tags
 nnoremap <silent> <Leader>H :<C-U>Helptags<CR>
 
+nnoremap <silent> <Leader>dk :<C-U>silent! Move! done \| bw<CR>
+nnoremap <silent> <Leader>d? :<C-U>silent! Move! dunno \| bw<CR>
+nnoremap <silent> <Leader>dn :<C-U>silent! Move! nope \| bw<CR>
 
 "# markdown
 
@@ -509,11 +523,16 @@ augroup CustomFileTypeSettings
     " Use tab of size 2 in some languages
     autocmd FileType tex,fortran,haskell,scheme,cmake,yaml setlocal tabstop=2 shiftwidth=2
 
+    autocmd FileType rst setlocal tabstop=3 shiftwidth=3
+
     " Line length limit for git commit messages body
     autocmd FileType gitcommit setlocal spell textwidth=72
 
     " Use python3 completion
     autocmd FileType python  setlocal omnifunc=python3complete#Complete
+
+    " Ruff default line length
+    autocmd FileType python  setlocal textwidth=88
 
     " Automatically generated indents in gitconfig are tabs
     autocmd FileType gitconfig setlocal noexpandtab
